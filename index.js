@@ -23,7 +23,9 @@
             stop.addEventListener("click", function(){
              clearInterval(sTime)
             })
-            reset.addEventListener("click",function(){
+            reset.addEventListener("click",function(e){
+               e.preventDefault()
+             clearInterval(sTime)
               x = 0;
               y = 0;
               sec.innerHTML = "00";
